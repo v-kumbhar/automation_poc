@@ -64,63 +64,7 @@ public class CreateNewAuthorization {
 		initiationPage.fillAllMandatoryFields();
 		initiationPage.clickOnUploadDocumnet();
 		initiationPage.clickOnFileUploadLink();
-		
-		StringSelection ss = new StringSelection(System.getProperty("user.dir")+"\\TestDataToUpload");
-		System.out.println(System.getProperty("user.dir"));
-	    Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
-		Thread.sleep(1000);
-		Robot rbt = new Robot();
-		Thread.sleep(1000);
-		rbt.mouseMove(350, 43);
-		rbt.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-		rbt.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-		rbt.keyPress(KeyEvent.VK_CONTROL);
-		rbt.keyPress(KeyEvent.VK_V);
-		rbt.keyRelease(KeyEvent.VK_V);
-		rbt.keyRelease(KeyEvent.VK_CONTROL);
-		rbt.keyPress(KeyEvent.VK_ENTER);
-		rbt.keyRelease(KeyEvent.VK_ENTER);
-		
-		
-		Thread.sleep(1000);
-		rbt.mouseMove(200, 143);
-		rbt.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-		rbt.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-		Thread.sleep(1000);
-		rbt.mouseMove(1500, 1200);
-		Thread.sleep(1000);
-		rbt.mouseMove(700, 390);
-		Thread.sleep(1000);
-		rbt.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-		rbt.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-		rbt.mouseMove(652, 12);
-		rbt.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-		rbt.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-//		Thread.sleep(5000);
-//		Robot rbt = new Robot();
-//		rbt.mouseMove(500, 390);
-//		rbt.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-//		rbt.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-//		Thread.sleep(4000);
-//		rbt.mouseMove(1000, 390);
-//		Thread.sleep(4000);
-//		rbt.mouseMove(700, 390);
-//		Thread.sleep(4000);
-//		rbt.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-//		rbt.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-//		Thread.sleep(4000);
-//		//rbt.mouseMove(652, 12);
-//		rbt.mouseMove(630, 12);
-//		rbt.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-//		rbt.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-//		rbt.keyPress(KeyEvent.VK_ESCAPE);
-//		rbt.keyRelease(KeyEvent.VK_ESCAPE);
-		
-//		rbt.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-//		rbt.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-		
-	
-//		initiationPage.enterFileUploadPath(System.getProperty("user.dir")+TestData.FILE_UPLOAD_PATH.data);
+		initiationPage.enterFileUploadPath(System.getProperty("user.dir")+TestData.FILE_UPLOAD_PATH.data);
 		initiationPage.submitUploadPath();
 		initiationPage.clickOnContributors();
 		initiationPage.clickOnAddContributor();
